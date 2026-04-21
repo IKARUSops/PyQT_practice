@@ -9,38 +9,322 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.pushButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(350, 250, 75, 23))
+class Ui_DTOS(object):
+    def setupUi(self, DTOS):
+        DTOS.setObjectName("DTOS")
+        DTOS.resize(803, 646)
+        DTOS.setMaximumSize(QtCore.QSize(803, 646))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setBold(True)
+        font.setWeight(75)
+        DTOS.setFont(font)
+        DTOS.setStyleSheet("#centralWidget {\n"
+" /*   border-image: url(:/vecteezy_nature-background-high-resolution-wallpaper-for-a-serene_49855129.jpg) 0 0 0 0 stretch stretch;*/\n"
+"    /* This color sits \'on top\' of the image */\n"
+"    background-color: rgba(0, 0, 0, 70); \n"
+"}\n"
+"QLabel {\n"
+"    color: rgba(0, 0, 0, 230); /* Off-white for better eyes */\n"
+"    font-family: \"Ubuntu Mono\";\n"
+"}\n"
+"QCheckBox {\n"
+"    color: white;\n"
+"}\n"
+"QCheckBox::indicator {\n"
+"    width: 15px;\n"
+"    height: 15px;\n"
+"    border-radius: 3px;\n"
+"    border: 1px solid white;\n"
+"    background-color: rgba(255, 255, 255, 20);\n"
+"}\n"
+"QCheckBox::indicator:checked {\n"
+"    background-color: #4CAF50; /* A nice \"Linux green\" to match the leaf */\n"
+"}")
+        self.centralWidget = QtWidgets.QWidget(parent=DTOS)
+        self.centralWidget.setObjectName("centralWidget")
+        self.horizontalLayoutWidget = QtWidgets.QWidget(parent=self.centralWidget)
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 20, 781, 163))
+        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label_2 = QtWidgets.QLabel(parent=self.horizontalLayoutWidget)
+        self.label_2.setStyleSheet("border: 1px solid rgba(255, 255, 255, 80);\n"
+"border-radius: 8px;\n"
+"background-color: rgba(255, 255, 255, 60);")
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("../Users/Omar/Downloads/Gemini_Generated_Image_hhhsfihhhsfihhhs__1_-removebg-preview.png"))
+        self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout.addWidget(self.label_2)
+        self.label = QtWidgets.QLabel(parent=self.horizontalLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setStyleSheet("border: 1px solid rgba(255, 255, 255, 80);\n"
+"border-radius: 8px;\n"
+"background-color: rgba(255, 255, 255, 60);")
+        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label.setObjectName("label")
+        self.horizontalLayout.addWidget(self.label)
+        self.groupBox = QtWidgets.QGroupBox(parent=self.centralWidget)
+        self.groupBox.setGeometry(QtCore.QRect(60, 279, 691, 221))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.groupBox.setFont(font)
+        self.groupBox.setStyleSheet("QGroupBox {\n"
+"    background-color: rgba(255, 255, 255, 30); /* Very transparent white */\n"
+"    border: 1px solid rgba(255, 255, 255, 50); /* Subtle light border */\n"
+"    border-radius: 15px; /* Rounded corners are essential for \"modern\" */\n"
+"    margin-top: 20px;\n"
+"    backdrop-filter: blur(10px); /* Note: Works in some Qt versions, but rgba is safer */\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    color: white;\n"
+"    subcontrol-origin: margin;\n"
+"    left: 10px;\n"
+"    padding: 0 3px;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"    background-color: rgba(255, 255, 255, 80);\n"
+"    color: white;\n"
+"    border: 1px solid rgba(255, 255, 255, 95);\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    font-family: \"Segoe UI\", sans-serif; /* Clean font */\n"
+"    font-size: 14px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(255, 255, 255, 50); /* Brightens when hovering */\n"
+"    border: 1px solid white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgba(255, 255, 255, 20); /* Darkens when clicked */\n"
+"}")
+        self.groupBox.setTitle("")
+        self.groupBox.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.groupBox.setObjectName("groupBox")
+        self.gridLayoutWidget = QtWidgets.QWidget(parent=self.groupBox)
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(10, 20, 671, 203))
+        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.pushButton_9 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_9.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_9.setFont(font)
+        self.pushButton_9.setObjectName("pushButton_9")
+        self.gridLayout.addWidget(self.pushButton_9, 3, 0, 1, 1)
+        self.pushButton_13 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_13.setMaximumSize(QtCore.QSize(300, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_13.setFont(font)
+        self.pushButton_13.setObjectName("pushButton_13")
+        self.gridLayout.addWidget(self.pushButton_13, 4, 1, 1, 2)
+        self.pushButton_12 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_12.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_12.setFont(font)
+        self.pushButton_12.setObjectName("pushButton_12")
+        self.gridLayout.addWidget(self.pushButton_12, 3, 1, 1, 1)
+        self.pushButton_10 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_10.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_10.setFont(font)
+        self.pushButton_10.setObjectName("pushButton_10")
+        self.gridLayout.addWidget(self.pushButton_10, 3, 2, 1, 1)
+        self.pushButton_8 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_8.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_8.setFont(font)
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.gridLayout.addWidget(self.pushButton_8, 2, 2, 1, 1)
+        self.pushButton_5 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_5.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_5.setFont(font)
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.gridLayout.addWidget(self.pushButton_5, 2, 3, 1, 1)
+        self.pushButton_11 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_11.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_11.setFont(font)
+        self.pushButton_11.setObjectName("pushButton_11")
+        self.gridLayout.addWidget(self.pushButton_11, 3, 3, 1, 1)
+        self.pushButton_6 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_6.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_6.setFont(font)
+        self.pushButton_6.setObjectName("pushButton_6")
+        self.gridLayout.addWidget(self.pushButton_6, 1, 3, 1, 1)
+        self.pushButton_7 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_7.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_7.setFont(font)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.gridLayout.addWidget(self.pushButton_7, 1, 2, 1, 1)
+        self.pushButton_2 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_2.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.gridLayout.addWidget(self.pushButton_2, 2, 0, 1, 1)
+        self.pushButton_3 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_3.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.gridLayout.addWidget(self.pushButton_3, 1, 1, 1, 1)
+        self.label_3 = QtWidgets.QLabel(parent=self.gridLayoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setUnderline(False)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setStyleSheet("color: rgb(255, 255, 255); /* For White */")
+        self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout.addWidget(self.label_3, 0, 1, 1, 2)
+        self.pushButton_4 = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton_4.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton_4.setFont(font)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.gridLayout.addWidget(self.pushButton_4, 2, 1, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
+        self.pushButton.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI,sans-serif")
+        font.setPointSize(-1)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+        self.gridLayout.addWidget(self.pushButton, 1, 0, 1, 1)
+        self.label_4 = QtWidgets.QLabel(parent=self.centralWidget)
+        self.label_4.setGeometry(QtCore.QRect(110, 260, 600, 22))
+        self.label_4.setMaximumSize(QtCore.QSize(600, 40))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setUnderline(False)
+        font.setWeight(75)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: rgb(255, 255, 255); /* For White */")
+        self.label_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(parent=self.centralWidget)
+        self.label_5.setGeometry(QtCore.QRect(60, 220, 691, 22))
+        self.label_5.setMaximumSize(QtCore.QSize(900, 40))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setUnderline(False)
+        font.setWeight(75)
+        self.label_5.setFont(font)
+        self.label_5.setStyleSheet("color: rgb(255, 255, 255); /* For White */")
+        self.label_5.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_5.setObjectName("label_5")
+        self.widget = QtWidgets.QWidget(parent=self.centralWidget)
+        self.widget.setGeometry(QtCore.QRect(70, 520, 151, 41))
+        self.widget.setObjectName("widget")
+        self.checkBox = QtWidgets.QCheckBox(parent=self.widget)
+        self.checkBox.setGeometry(QtCore.QRect(10, 10, 121, 21))
+        self.checkBox.setObjectName("checkBox")
+        DTOS.setCentralWidget(self.centralWidget)
+        self.menubar = QtWidgets.QMenuBar(parent=DTOS)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 803, 21))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
+        self.menuFile = QtWidgets.QMenu(parent=self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuView = QtWidgets.QMenu(parent=self.menubar)
+        self.menuView.setObjectName("menuView")
+        self.menuOptions = QtWidgets.QMenu(parent=self.menubar)
+        self.menuOptions.setObjectName("menuOptions")
+        DTOS.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(parent=DTOS)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        DTOS.setStatusBar(self.statusbar)
+        self.actionOptions = QtGui.QAction(parent=DTOS)
+        self.actionOptions.setObjectName("actionOptions")
+        self.menuView.addAction(self.actionOptions)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuView.menuAction())
+        self.menubar.addAction(self.menuOptions.menuAction())
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(DTOS)
+        QtCore.QMetaObject.connectSlotsByName(DTOS)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, DTOS):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+        DTOS.setWindowTitle(_translate("DTOS", "MainWindow"))
+        self.label.setText(_translate("DTOS", "Welcome to DTOS!"))
+        self.pushButton_9.setText(_translate("DTOS", "Shells"))
+        self.pushButton_13.setText(_translate("DTOS", "Donate to Patreon"))
+        self.pushButton_12.setText(_translate("DTOS", "Login Manager"))
+        self.pushButton_10.setText(_translate("DTOS", "Get Involved"))
+        self.pushButton_8.setText(_translate("DTOS", "Fix PacMan Keys"))
+        self.pushButton_5.setText(_translate("DTOS", "Fix PacMan Mirrors"))
+        self.pushButton_11.setText(_translate("DTOS", "Support Forum"))
+        self.pushButton_6.setText(_translate("DTOS", "Video Tutorial"))
+        self.pushButton_7.setText(_translate("DTOS", "Key Bindings"))
+        self.pushButton_2.setText(_translate("DTOS", "Color Scheme"))
+        self.pushButton_3.setText(_translate("DTOS", "Documentation"))
+        self.label_3.setText(_translate("DTOS", "Please Subscribe to DistroTube on Patreon"))
+        self.pushButton_4.setText(_translate("DTOS", "Screen Resolution"))
+        self.pushButton.setText(_translate("DTOS", "About DTOS"))
+        self.label_4.setText(_translate("DTOS", "We\'ve got your covered. You can help support DT\'s work including his work on DTOS."))
+        self.label_5.setText(_translate("DTOS", "Need help using DTOS or customizing it? Or maybe you just want to learn more about Linux?"))
+        self.checkBox.setText(_translate("DTOS", "Auto Start"))
+        self.menuFile.setTitle(_translate("DTOS", "File"))
+        self.menuView.setTitle(_translate("DTOS", "View"))
+        self.menuOptions.setTitle(_translate("DTOS", "Options"))
+        self.actionOptions.setText(_translate("DTOS", "Options"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    DTOS = QtWidgets.QMainWindow()
+    ui = Ui_DTOS()
+    ui.setupUi(DTOS)
+    DTOS.show()
     sys.exit(app.exec())
